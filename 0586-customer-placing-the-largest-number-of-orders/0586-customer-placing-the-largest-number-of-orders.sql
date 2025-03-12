@@ -1,13 +1,9 @@
 SELECT
-    a.customer_number
+    customer_number
 FROM
-    (SELECT
-        COUNT(*) AS order_count,
-        customer_number
-    FROM
-        Orders
-    GROUP BY
-        customer_number) a
+    Orders
+GROUP BY
+    customer_number
 ORDER BY
-    a.order_count DESC
+    COUNT(*) DESC
 LIMIT 1
