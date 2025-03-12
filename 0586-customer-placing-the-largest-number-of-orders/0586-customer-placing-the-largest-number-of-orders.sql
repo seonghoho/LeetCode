@@ -5,5 +5,5 @@ FROM
 GROUP BY
     customer_number
 ORDER BY
-    COUNT(*) DESC
+    COUNT(1) DESC
 LIMIT 1
